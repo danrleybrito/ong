@@ -1,0 +1,405 @@
+/* =========================
+   IMPORTAÇÃO DE MÓDULOS CSS
+========================= */
+@import url("./modules/variaveis.css");
+@import url("./modules/reset.css");
+@import url("./modules/menu.css");
+@import url("./modules/formulario.css");
+@import url("./modules/acoes.css");
+
+/* 
+  Nota: Nenhuma regra de estilo tradicional (como body { ... }) 
+  deve vir antes dos @imports, caso contrário, elas serão ignoradas 
+  pelo navegador.
+*/
+
+/* =========================
+   RESET E CONFIGURAÇÕES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f8f9fa;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    background-color: #176b52;
+    color: white;
+    padding: 18px 0;
+}
+
+.cabecalho .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover,
+.menu a:focus {
+    text-decoration: underline;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(
+        135deg,
+        #dff5eb,
+        #f8f9fa
+    );
+}
+
+.hero-conteudo {
+    max-width: 700px;
+}
+
+.destaque,
+.categoria {
+    color: #176b52;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin: 15px 0 20px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 13px 25px;
+    background-color: #176b52;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.botao:hover,
+.botao:focus {
+    background-color: #0e503c;
+}
+
+.botao-secundario {
+    background-color: white;
+    color: #176b52;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.sobre,
+.projetos,
+.cadastro {
+    padding: 70px 0;
+}
+
+.sobre h2,
+.projetos h2,
+.cadastro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #176b52;
+    margin-bottom: 12px;
+}
+
+.chamada {
+    background-color: #176b52;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.chamada h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.chamada p {
+    margin-bottom: 25px;
+}
+
+/* =========================
+   CABEÇALHO DAS PÁGINAS
+========================= */
+
+.pagina-header {
+    background-color: #dff5eb;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.pagina-header h1 {
+    font-size: 3rem;
+}
+
+/* =========================
+   PROJETOS
+========================= */
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.projeto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.projeto-conteudo {
+    padding: 30px;
+}
+
+.projeto h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.projeto p {
+    margin-bottom: 20px;
+}
+
+.projeto a {
+    color: #176b52;
+    font-weight: bold;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario-container {
+    max-width: 850px;
+}
+
+.obrigatorio {
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #176b52;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font: inherit;
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(23, 107, 82, 0.25);
+    border-color: #176b52;
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid,
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #c62828;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #2e7d32;
+}
+
+.campo-menor {
+    max-width: 180px;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.campo-checkbox input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.mensagem-formulario {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    background-color: #17221e;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .cabecalho .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards,
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .pagina-header h1 {
+        font-size: 2.2rem;
+    }
+}
