@@ -1,0 +1,30 @@
+name: Pedido de funcionalidade
+description: Sugira uma melhoria ou nova funcionalidade.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: Descreva uma necessidade do projeto; propostas podem ser discutidas antes da implementacao.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou necessidade
+      description: Que necessidade esta sugestao pretende atender?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solucao sugerida
+      description: Descreva a mudanca que gostaria de ver.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Descreva outras solucoes consideradas, se houver.
+    validations:
+      required: false
