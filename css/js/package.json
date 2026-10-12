@@ -1,0 +1,14 @@
+{
+  "name": "ong-esperanca",
+  "version": "1.0.0",
+  "description": "API da ONG Esperança",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "node --watch api/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ong-esperanca",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "api": "npm --prefix css/js run dev",
+    "images:convert": "node scripts/convert-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^8.3.4"
+  }
+}
