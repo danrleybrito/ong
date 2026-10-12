@@ -1,66 +1,75 @@
-# ONG
+# ONG Esperança
 
-Projeto de estudo focado em organização, documentação e boas práticas de desenvolvimento colaborativo em GitHub.
+Projeto de estudo de um site para a ONG Esperança, com páginas informativas e uma API simples para cadastro de voluntários.
 
-## Visão geral
+## Estrutura
 
-Este repositório serve como base para aprender e praticar:
+- `index.html`: página inicial do site.
+- `cadastro.html`: página de cadastro de voluntários.
+- `css/style.css`: estilos do site.
+- `css/js/script.js`: código JavaScript do site.
+- `css/js/api/`: API Node.js/Express para os dados de voluntários.
+- `html/`: páginas HTML adicionais do projeto.
+- `img/`: imagens usadas pelo site.
 
-- estruturação de projetos em GitHub;
-- uso de issues e pull requests;
-- fluxo de trabalho com GitFlow;
-- criação de templates para padronizar contribuições;
-- documentação e processo de contribuição para equipes e projetos open source.
+Para regenerar as versões PNG e WebP da imagem JPEG original, bem como variantes responsivas JPEG/WebP de 320 e 480 pixels, execute `npm run images:convert` na raiz do projeto. A página de projetos usa `picture`, `srcset` e `sizes` para o navegador escolher o formato e a resolução mais adequados à viewport e à densidade do ecrã; a imagem original de 678 pixels é o candidato de maior resolução.
 
-A proposta é manter o projeto simples, mas com uma base organizada para evoluir com novas funcionalidades ou melhorias no futuro.
+## Aparência e acessibilidade
 
-## Secções principais
+Use o seletor **Aparência** no cabeçalho para escolher entre seguir a preferência do sistema, tema claro, tema escuro ou alto contraste. A escolha manual fica guardada neste navegador. A página também respeita as cores forçadas do sistema operacional.
 
-### 1. Organização do projeto
-O repositório já inclui arquivos de suporte para a gestão do desenvolvimento, como:
+## Requisitos
 
-- templates de issue para bugs e pedidos de funcionalidade;
-- template de pull request;
-- guia de contribuição e fluxo de trabalho.
+- Node.js e npm.
 
-### 2. Processo de contribuição
-A documentação do projeto estabelece convenções para a criação de branches, pull requests, releases e utilização de milestones.
+## Executar o site
 
-### 3. Boas práticas de desenvolvimento
-O projeto enfatiza:
+Na raiz do projeto, instale as dependências e inicie o servidor de desenvolvimento:
 
-- uso de GitFlow;
-- versionamento semântico;
-- organização dos artefatos de desenvolvimento no GitHub;
-- revisão e validação antes da integração do código.
+```bash
+npm install
+npm run dev
+```
 
-## Tecnologias e ferramentas utilizadas
+O Vite serve as páginas e atualiza o navegador durante o desenvolvimento. As entradas são `index.html`, `cadastro.html` e as páginas em `html/`.
 
-Como este repositório, neste momento, está centrado em documentação e processo de colaboração, as tecnologias/ferramentas principais são:
+Para gerar os arquivos prontos para hospedagem:
 
-- Git
-- GitHub
-- GitHub Issues
-- GitHub Pull Requests
-- GitHub Templates
-- Markdown
-- YAML
-- GitFlow
+```bash
+npm run build
+npm run preview
+```
 
-## Estrutura do repositório
+O site compilado é gerado em `dist/`. Esse diretório não deve ser versionado.
 
-- `.github/` — templates de issues e pull requests
-- `CONTRIBUTING.md` — guia de contribuição e fluxo de desenvolvimento
-- `README.md` — visão geral do projeto
+## Deploy no GitHub Pages
 
-## Como contribuir
+O workflow `.github/workflows/deploy-pages.yml` compila o site e publica o conteúdo
+de `dist/` no GitHub Pages sempre que há um push em `main` ou quando o workflow é
+executado manualmente. Na primeira execução, confirme em **Settings > Pages** que
+a origem está definida como **GitHub Actions** caso o GitHub solicite essa
+configuração. Para este repositório, o endereço esperado é
+`https://danrleybrito.github.io/ong/`.
 
-1. Crie uma branch seguindo o fluxo definido no guia de contribuição.
-2. Aplique suas alterações seguindo os padrões do projeto.
-3. Abra um pull request usando o template disponível.
-4. Vincule issues relacionadas quando necessário.
-5. Aguarde revisão e validação antes do merge.
+A publicação hospeda somente o frontend estático. A API Express em `css/js/` não
+é executada pelo GitHub Pages, e o formulário atual guarda os dados no
+`localStorage` do navegador; os cadastros não são enviados a um servidor nem
+compartilhados entre dispositivos.
 
-## Status
+## Executar a API
 
-Este projeto encontra-se em fase inicial de organização e documentação, com foco em estabelecer a base para desenvolvimento futuro.
+Instale as dependências e inicie o servidor:
+
+```bash
+cd css/js
+npm install
+npm start
+```
+
+A API ficará disponível em `http://localhost:3000/api`. Para verificar se está respondendo, acesse esse endereço no navegador. Os voluntários são armazenados em `css/js/api/voluntarios.json`, arquivo de dados local ignorado pelo Git.
+
+Durante o desenvolvimento, use `npm run api` na raiz do projeto para iniciar a API com reinicialização automática. A API continua usando seu próprio `package.json` em `css/js/`.
+
+## Contribuição
+
+O projeto segue Gitflow e versionamento semântico. Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para orientações sobre branches, releases, issues, milestones e pull requests.

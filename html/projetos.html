@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos e ações sociais da ONG Esperança.">
+    <title>ONG Esperança | Projetos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <a href="index.html" class="logo">
+                ONG Esperança
+            </a>
+
+            <button
+                type="button"
+                class="menu-hamburguer"
+                aria-controls="lista-navegacao"
+                aria-expanded="false"
+                aria-label="Abrir menu principal"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="lista-navegacao">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="cadastro.html">Seja Voluntário</a></li>
+                </ul>
+            </nav>
+
+            <div class="controle-tema">
+                <label for="seletor-tema">Aparência</label>
+                <select id="seletor-tema">
+                    <option value="system">Seguir sistema</option>
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                    <option value="contrast">Alto contraste</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-header">
+            <div class="container">
+                <h1>Nossos projetos</h1>
+                <p>
+                    Conheça algumas das iniciativas desenvolvidas pela
+                    ONG Esperança.
+                </p>
+            </div>
+        </section>
+
+        <section class="projetos" aria-labelledby="titulo-projetos">
+            <div class="container">
+                <h2 id="titulo-projetos">Projetos e ações sociais</h2>
+
+                <div class="grid-projetos">
+
+                    <article class="projeto">
+                        <div class="projeto-conteudo">
+                            <span class="categoria">Educação</span>
+                            <h3>Educação para Todos</h3>
+
+                            <p>
+                                Oferecemos reforço escolar, oficinas
+                                educativas e atividades de incentivo
+                                à leitura para crianças e adolescentes.
+                            </p>
+
+                            <a href="cadastro.html">
+                                Quero ajudar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="projeto">
+                        <div class="projeto-conteudo">
+                            <span class="categoria">Solidariedade</span>
+                            <h3>Campanha do Bem</h3>
+
+                            <p>
+                                Arrecadamos alimentos, roupas e produtos
+                                essenciais para famílias em situação
+                                de vulnerabilidade.
+                            </p>
+
+                            <a href="cadastro.html">
+                                Participar
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="projeto">
+                        <div class="projeto-conteudo">
+                            <span class="categoria">Comunidade</span>
+                            <h3>Ação Comunitária</h3>
+
+                            <p>
+                                Realizamos ações sociais, atendimentos
+                                comunitários e atividades que fortalecem
+                                os vínculos entre os moradores.
+                            </p>
+
+                            <a href="cadastro.html">
+                                Seja voluntário
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="projeto">
+                        <picture class="projeto-imagem">
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ../img/Social-320.webp 320w,
+                                    ../img/Social-480.webp 480w,
+                                    ../img/Social.webp 678w
+                                "
+                                sizes="(max-width: 768px) 92vw, (max-width: 1195px) calc(46vw - 15px), 535px"
+                            >
+                            <img
+                                src="../img/Social.jpeg"
+                                srcset="
+                                    ../img/Social-320.jpeg 320w,
+                                    ../img/Social-480.jpeg 480w,
+                                    ../img/Social.jpeg 678w
+                                "
+                                sizes="(max-width: 768px) 92vw, (max-width: 1195px) calc(46vw - 15px), 535px"
+                                width="678"
+                                height="452"
+                                loading="lazy"
+                                decoding="async"
+                                alt="Criança sorridente durante uma refeição em uma ação comunitária."
+                            >
+                        </picture>
+                        <div class="projeto-conteudo">
+                            <span class="categoria">Alimentação</span>
+                            <h3>Alimento e Esperança</h3>
+
+                            <p>
+                                Distribuímos cestas básicas e promovemos
+                                campanhas de arrecadação para auxiliar
+                                famílias que precisam de apoio.
+                            </p>
+
+                            <a href="cadastro.html">
+                                Quero contribuir
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script type="module" src="../css/js/script.js"></script>
+</body>
+</html>
